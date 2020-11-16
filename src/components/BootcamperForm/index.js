@@ -34,7 +34,8 @@ function BootcamperForm({ state }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    fetch("http://localhost:5000/bootcampers", {
+    fetch("https://internetexpl-backend.herokuapp.com/bootcampers", {
+      /* fetch("http://localhost:5000/bootcampers", { */
       method: "POST",
       body: JSON.stringify({
         name: state.displayName,

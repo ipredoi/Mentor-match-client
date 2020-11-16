@@ -21,9 +21,12 @@ function CoachDisplayTables() {
   //get request for bootcampers data
   useEffect(() => {
     async function getBootcamper() {
-      const response = await fetch(`http://localhost:5000/bootcampers`, {
-        headers: { "Contetn-Type": "application/json" },
-      });
+      const response = await fetch(
+        `https://internetexpl-backend.herokuapp.com/bootcampers`,
+        {
+          headers: { "Contetn-Type": "application/json" },
+        }
+      );
       const data = await response.json();
       // result - an array of objects
       setBootcampersTable(data.result);
@@ -35,9 +38,12 @@ function CoachDisplayTables() {
   //Get request for mentors data
   useEffect(() => {
     async function getMentor() {
-      const response = await fetch(`http://localhost:5000/mentors`, {
-        headers: { "Content-Type": "application/json" },
-      });
+      const response = await fetch(
+        `https://internetexpl-backend.herokuapp.com/mentors`,
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
       const data = await response.json();
       //result - an array of objects
       setMentorsTable(data.result);
