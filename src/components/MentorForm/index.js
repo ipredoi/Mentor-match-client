@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 //css
 import styles from "./mentorForm.module.css";
-
+const url = process.env.REACT_APP_BACKEND_URL || `http://localhost:5000`;
 function MentorForm({ state }) {
   const [displayName, setDisplayName] = useState("");
   const [email, setEmail] = useState("");
@@ -64,7 +64,7 @@ function MentorForm({ state }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    fetch("http://localhost:5000/mentors", {
+    fetch(`${url}/mentors`, {
       method: "POST",
       body: JSON.stringify({
         name: state.displayName,
@@ -93,7 +93,7 @@ function MentorForm({ state }) {
   }
 
   useEffect(() => {
-    fetch(`http://localhost:5000/mentors/${state.uid}`)
+    fetch(`${url}/mentors/${state.uid}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.result !== undefined) {

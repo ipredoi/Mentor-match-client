@@ -20,7 +20,7 @@ import CoachesMain from "../../Pages/CoachesMain";
 import CoachDisplayTables from "../../Pages/CoachDisplayTables";
 import CoachSignIn from "../../Pages/CoachesMain";
 
-const url = process.env.REACT_APP_BACKEND_URL || `http://localhost:3000`;
+
 
 function App() {
   const [userGoogle, setUserGoogle] = useState("");

@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 //css
 import styles from "./bootcamperForm.module.css";
 
+const url = process.env.REACT_APP_BACKEND_URL || `http://localhost:5000`;
+
 function BootcamperForm({ state }) {
   const [displayName, setDisplayName] = useState("");
   const [email, setEmail] = useState("");
@@ -34,8 +36,7 @@ function BootcamperForm({ state }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    fetch("https://internetexpl-backend.herokuapp.com/bootcampers", {
-      /* fetch("http://localhost:5000/bootcampers", { */
+    fetch(`${url}/bootcampers`, {
       method: "POST",
       body: JSON.stringify({
         name: state.displayName,
@@ -58,7 +59,7 @@ function BootcamperForm({ state }) {
   }
 
   useEffect(() => {
-    fetch(`http://localhost:5000/bootcampers/${state.uid}`)
+    fetch(`${url}/bootcampers/${state.uid}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.result !== undefined) {

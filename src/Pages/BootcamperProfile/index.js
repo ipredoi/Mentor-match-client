@@ -10,12 +10,12 @@ import styles from "./bootcamperprofile.module.css";
 
 //images
 import soc from "../../Images/soc.png";
-
+const url = process.env.REACT_APP_BACKEND_URL || `http://localhost:5000`;
 function BootcamperProfile({ state }) {
   const [dbInfo, setDbInfo] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/bootcampers/${state.uid}`)
+    fetch(`${url}/bootcampers/${state.uid}`)
       .then((response) => response.json())
       .then((data) => setDbInfo({ ...data.result }));
     console.log(dbInfo);

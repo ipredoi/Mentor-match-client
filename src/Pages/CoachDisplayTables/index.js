@@ -11,6 +11,8 @@ import soc from "../../Images/soc.png";
 //css
 import styles from "./coachTables.module.css";
 
+const url = process.env.REACT_APP_BACKEND_URL || `http://localhost:5000`;
+
 function CoachDisplayTables() {
   //bootcampers table
   const [bootcampersTable, setBootcampersTable] = useState([]);
@@ -21,12 +23,9 @@ function CoachDisplayTables() {
   //get request for bootcampers data
   useEffect(() => {
     async function getBootcamper() {
-      const response = await fetch(
-        `https://internetexpl-backend.herokuapp.com/bootcampers`,
-        {
-          headers: { "Contetn-Type": "application/json" },
-        }
-      );
+      const response = await fetch(`${url}/bootcampers`, {
+        headers: { "Contetn-Type": "application/json" },
+      });
       const data = await response.json();
       // result - an array of objects
       setBootcampersTable(data.result);
@@ -38,12 +37,9 @@ function CoachDisplayTables() {
   //Get request for mentors data
   useEffect(() => {
     async function getMentor() {
-      const response = await fetch(
-        `https://internetexpl-backend.herokuapp.com/mentors`,
-        {
-          headers: { "Content-Type": "application/json" },
-        }
-      );
+      const response = await fetch(`${url}/mentors`, {
+        headers: { "Content-Type": "application/json" },
+      });
       const data = await response.json();
       //result - an array of objects
       setMentorsTable(data.result);

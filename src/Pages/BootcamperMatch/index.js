@@ -12,7 +12,7 @@ import styles from "./match.module.css";
 
 //images
 import soc from "../../Images/soc.png";
-
+const url = process.env.REACT_APP_BACKEND_URL || `http://localhost:5000`;
 function BootcamperMatch({ state }) {
   const [mentors, setMentors] = useState([]);
   const [chosenArray, setChosenArray] = useState([]);
@@ -20,13 +20,13 @@ function BootcamperMatch({ state }) {
 
   useEffect(() => {
     setMentors([]);
-    fetch("http://localhost:5000/mentors")
+    fetch(`${url}/mentors`)
       .then((response) => response.json())
       .then((data) => setMentors([...mentors, ...data.result]));
   }, []);
   console.log(state.uid);
   function handleSubmit() {
-    fetch(`http://localhost:5000/bootcampers/${state.uid}`, {
+    fetch(`${url}/bootcampers/${state.uid}`, {
       method: "PATCH",
       body: JSON.stringify({ mentors_i_like: chosenArray }),
       headers: {
