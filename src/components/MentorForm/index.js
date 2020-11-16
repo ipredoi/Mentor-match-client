@@ -1,14 +1,14 @@
 //functionality
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 //components
 
 //css
 import styles from "./mentorForm.module.css";
 const url = process.env.REACT_APP_BACKEND_URL || `http://localhost:5000`;
 function MentorForm({ state }) {
-  const [displayName, setDisplayName] = useState("");
-  const [email, setEmail] = useState("");
+  const [, setDisplayName] = useState("");
+  const [, setEmail] = useState("");
   const [industry, setIndustry] = useState("");
   const [interests, setInterests] = useState("");
   const [bio, setBio] = useState("");

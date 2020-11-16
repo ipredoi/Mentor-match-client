@@ -1,7 +1,6 @@
 //functionality
 import React, { useState, useEffect } from "react";
-import BootcamperMatch from "../../Pages/BootcamperMatch";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 //components
 
@@ -11,8 +10,8 @@ import styles from "./bootcamperForm.module.css";
 const url = process.env.REACT_APP_BACKEND_URL || `http://localhost:5000`;
 
 function BootcamperForm({ state }) {
-  const [displayName, setDisplayName] = useState("");
-  const [email, setEmail] = useState("");
+  const [, setDisplayName] = useState("");
+  const [, setEmail] = useState("");
   const [interestedIndustry, setInterestedIndustry] = useState("");
   const [interests, setInterests] = useState("");
   const [bio, setBio] = useState("");

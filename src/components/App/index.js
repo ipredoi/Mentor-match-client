@@ -1,8 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Button from "../Button/index";
 
 import HomePage from "../../Pages/Homepage";
 // Mentor Pages
@@ -14,11 +13,9 @@ import BootcamperSignIn from "../SignInBootcamper/index";
 import BootcamperMain from "../../Pages/BootcamperMain/index";
 import BootcamperMatch from "../../Pages/BootcamperMatch/index";
 import BootcampersProfile from "../../Pages/BootcamperProfile/index";
-import BootcampersMatch from "../../Pages/BootcamperMatch/index";
 //Coach Pages
 import CoachesMain from "../../Pages/CoachesMain";
 import CoachDisplayTables from "../../Pages/CoachDisplayTables";
-import CoachSignIn from "../../Pages/CoachesMain";
 
 
 
