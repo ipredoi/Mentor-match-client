@@ -1,20 +1,16 @@
 //functionality
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 //components
 import Button from "../../components/Button/index";
-import BootcamperForm from "../../components/BootcamperForm/index";
 
 //css
 import styles from "./bootcampers.module.css";
 
 //images
 import soc from "../../Images/soc.png";
-
-//page
-import BootcamperSignIn from "../../components/SignInBootcamper/index";
 
 function BootcamperHomepage() {
   return (

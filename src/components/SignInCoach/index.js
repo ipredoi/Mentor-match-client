@@ -1,11 +1,11 @@
 //functionality
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
+/* import { useHistory } from "react-router-dom"; */
 
 //components
 import Button from "../Button/index";
-import Coaches from "../../Pages/CoachesMain/index";
+/* import Coaches from "../../Pages/CoachesMain/index"; */
 
 //css
 import styles from "./signInCoach.module.css";

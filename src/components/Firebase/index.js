@@ -22,6 +22,7 @@ export function signInWithRedirect() {
     // .getRedirectResult()
     .catch(function (error) {
       var errorCode = error.code;
+      console.log(errorCode);
     });
 }
 
@@ -29,3 +30,4 @@ export function signInWithRedirect() {
 export function logout() {
   return firebase.auth().signOut().then().catch(console.error);
 }
+

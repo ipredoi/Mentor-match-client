@@ -1,7 +1,7 @@
 //functionality
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 //auth
@@ -18,7 +18,7 @@ import styles from "./signInMentor.module.css";
 //images
 import signInGoogle from "../../Images/SignInGoogle.png";
 import loadingSpinner from "../../Images/Loading.gif";
-import signOut from "../../Images/SignOut.png";
+//import signOut from "../../Images/SignOut.png";
 import errorImage from "../../Images/error.png";
 import soc from "../../Images/soc.png";
 
@@ -61,7 +61,6 @@ function MentorSignIn({ setMentorGoogle }) {
         </Link>
       )}
       {user && <p>Welcome, {user.displayName}</p>}
-
       {user && <MentorsForm state={user} />}
       {loading && (
         <img

@@ -1,19 +1,19 @@
 //functionality
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 import { motion } from "framer-motion";
 //images
 import soc from "../../Images/soc.png";
 //components
 import Button from "../../components/Button/index";
-import BootcamperSignIn from "../../components/SignInBootcamper/index";
+/* import BootcamperSignIn from "../../components/SignInBootcamper/index";
 import MentorSignIn from "../../components/SignInMentor/index";
 import CoachSignIn from "../../components/SignInCoach/index";
-
+ */
 //pages
-import MentorMain from "../MentorsMain/index";
+/* import MentorMain from "../MentorsMain/index";
 import BootcamperMain from "../BootcamperMain/index";
-import CoachesMain from "../CoachesMain/index";
+import CoachesMain from "../CoachesMain/index"; */
 
 //css
 import styles from "./homepage.module.css";

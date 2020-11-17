@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 //functionality
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -64,11 +65,9 @@ function BootcamperForm({ state }) {
         if (data.result !== undefined) {
           if (data.result.google_id === state.uid) {
             setDbBootcamperInfo(true);
-            console.log(state.uid);
           }
         }
       });
-    console.log(dbBootcamperInfo);
   }, []);
 
   //console.log(displayName, email, interestedIndustry, interests, bio);}

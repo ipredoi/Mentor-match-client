@@ -104,7 +104,7 @@ function MentorForm({ state }) {
         }
       });
     console.log(dbMentorInfo);
-  }, []);
+  }, [dbMentorInfo, state.uid]);
 
   //console.log(displayName, email, interestedIndustry, interests, bio);
 

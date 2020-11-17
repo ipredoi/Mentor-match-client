@@ -4,7 +4,7 @@ import React from "react";
 //components
 
 //css
-import styles from "./checkbox.module.css";
+/* import styles from "./checkbox.module.css"; */
 
 function Checkbox({ chosenFn, name, chosenArray }) {
   function handleClick(e) {
