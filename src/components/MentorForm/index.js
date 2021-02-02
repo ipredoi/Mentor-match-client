@@ -211,7 +211,7 @@ function MentorForm({ state }) {
 							></input>
 						</label>
 
-						<Link to="/MyProfile">
+						<Link to="/MentorProfile">
 							<button onClick={handleSubmit} type="submit">
 								Submit Form
 							</button>

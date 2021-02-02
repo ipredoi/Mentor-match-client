@@ -20,6 +20,8 @@ export default function App() {
 	const [userGoogle, setUserGoogle] = useState("");
 	const [mentorGoogle, setMentorGoogle] = useState("");
 
+	console.log(mentorGoogle);
+
 	return (
 		<Router>
 			<div className="App">
@@ -45,7 +47,7 @@ export default function App() {
 						<MentorMain state={mentorGoogle} />
 					</Route>
 					<Route path="/mentorProfile">
-						<MentorProfile />
+						<MentorProfile state={mentorGoogle} />
 					</Route>
 					<Route path="/bootcamperProfile">
 						<BootcampersProfile state={userGoogle} />

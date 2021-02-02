@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import Button from "../../components/Button/index";
 import styles from "./bootcamperprofile.module.css";
 import soc from "../../Images/soc.png";
+import {url} from "../../libs/serverUrl"
 
-const url = process.env.REACT_APP_BACKEND_URL;
 
 function BootcamperProfile({ state }) {
 	const [dbInfo, setDbInfo] = useState({});
@@ -48,10 +48,10 @@ function BootcamperProfile({ state }) {
 				<p>
 					<b>Interests:</b> <br /> {dbInfo.interests}
 				</p>
-				{/* <p>
+				 <p>
           <b>Selected Mentors:</b>{" "}
           {dbInfo.mentors_i_like && dbInfo.mentors_i_like.join(", ")}
-        </p> */}
+        </p> 
 				<p>
 					<b>Email Address:</b>
 					<br /> {dbInfo.email}

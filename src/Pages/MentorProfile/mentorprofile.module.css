@@ -1,18 +1,36 @@
 .socLogo {
-  width: 100px;
-  margin-top: 40px;
-  position: relative;
-  margin-right: 85%;
+	width: 100px;
+	margin-top: 40px;
+	position: relative;
+	margin-right: 85%;
 }
 
 .mentorprofile {
-  display: flex;
-  flex-flow: column wrap;
-  align-content: center;
-  align-items: center;
-  text-align: center;
+	display: flex;
+	flex-flow: column wrap;
+	align-content: center;
+	align-items: center;
+	text-align: center;
 }
 
 p {
-  color: white;
+	color: white;
+	max-width: 100%;
+	text-align: center;
+}
+.profileInfo {
+	max-width: 60%;
+	min-width: 50%;
+	padding: 20px;
+	background: rgba(255, 255, 255, 0.15);
+	border-radius: 20px;
+	display: flex;
+	flex-flow: column wrap;
+}
+
+div {
+	display: flex;
+	flex-flow: column wrap;
+	align-content: center;
+	text-align: center;
 }
