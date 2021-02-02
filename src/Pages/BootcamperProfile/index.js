@@ -4,8 +4,7 @@ import { motion } from "framer-motion";
 import Button from "../../components/Button/index";
 import styles from "./bootcamperprofile.module.css";
 import soc from "../../Images/soc.png";
-import {url} from "../../libs/serverUrl"
-
+import { url } from "../../libs/serverUrl";
 
 function BootcamperProfile({ state }) {
 	const [dbInfo, setDbInfo] = useState({});
@@ -15,6 +14,7 @@ function BootcamperProfile({ state }) {
 			.then((response) => response.json())
 			.then((data) => setDbInfo({ ...data.result }));
 		console.log(dbInfo);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	console.log(state.uid);
@@ -48,10 +48,10 @@ function BootcamperProfile({ state }) {
 				<p>
 					<b>Interests:</b> <br /> {dbInfo.interests}
 				</p>
-				 <p>
-          <b>Selected Mentors:</b>{" "}
-          {dbInfo.mentors_i_like && dbInfo.mentors_i_like.join(", ")}
-        </p> 
+				<p>
+					<b>Selected Mentors:</b>{" "}
+					{dbInfo.mentors_i_like && dbInfo.mentors_i_like.join(", ")}
+				</p>
 				<p>
 					<b>Email Address:</b>
 					<br /> {dbInfo.email}
