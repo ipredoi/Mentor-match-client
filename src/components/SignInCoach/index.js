@@ -16,11 +16,9 @@ function AskForPassword() {
 		let value = event.target.value;
 
 		if (value === "yes") {
-			console.log("this is the value", value);
 			setIsTrue(true);
 		}
 	}
-	console.log(isTrue);
 	return (
 		<div className={styles.coachPassword}>
 			<nav className={styles.coachInput}>
