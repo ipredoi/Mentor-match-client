@@ -17,6 +17,7 @@ function BootcamperMatch({ state }) {
 		fetch(`${url}/mentors`)
 			.then((response) => response.json())
 			.then((data) => setMentors([...mentors, ...data.result]));
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	console.log(state.uid);
 	function handleSubmit() {
