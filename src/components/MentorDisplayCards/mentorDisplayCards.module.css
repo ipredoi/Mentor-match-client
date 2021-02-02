@@ -17,18 +17,3 @@
   align-items: flex-start;
   max-width: 300px;
 }
-
-/* .card ul li:nth-child(1) {
-  align-self: center;
-  font-weight: bold;
-  text-decoration: underline;
-  margin-bottom: 5px;
-  padding: 0;
-  margin: 0;
-}
-
-.card ul li:nth-child(5) {
-  text-align: left;
-  padding: 0;
-  margin: 0;
-} */

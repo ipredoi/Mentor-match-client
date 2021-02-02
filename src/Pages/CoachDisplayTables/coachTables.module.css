@@ -1,73 +1,96 @@
 .socLogo {
-  width: 150px;
-  margin: 30px auto;
-}
-
-th {
-  background-color: #4174cc;
-  padding: 1vw;
-  letter-spacing: 0.15rem;
-  font-size: 1.2rem;
-}
-
-td {
-  text-align: center;
-}
-
-.tables {
-  text-align: center;
-  width: 100vw;
-  padding: 20px;
-}
-
-table {
-  border: 1px solid #1c6ea4;
-  background-color: rgba(59, 55, 55, 0.815);
-  text-align: left;
-  border-collapse: collapse;
-  color: #fff;
+	width: 150px;
+	margin: 30px auto;
 }
 
 .pTag {
-  text-align: center;
-  max-width: 100%;
-  font-size: 1.5rem;
-}
-
-table th {
-  background: #f8f8f8;
-  border-bottom: 2px solid #444444;
-  text-align: center;
-  color: #000;
-  border-right: 1px solid #333;
-}
-
-td,
-th {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 10px;
-  line-height: 1.4rem;
-}
-
-.mentorsList {
-  width: 300px;
-  min-width: 300px;
-}
-
-.BootcamperTable {
-  width: 80%;
-  margin: 0 auto 50px auto;
-}
-
-.mentorsTable {
-  width: 80%;
-  margin: 0 auto;
+	text-align: center;
+	max-width: 100%;
+	font-size: 1.5rem;
 }
 
 .h2 {
-  font-size: 2.3rem;
+	font-size: 2.3rem;
 }
 
 .welcomeh2 {
-  font-size: 3rem;
+	font-size: 3rem;
+}
+
+table {
+	width: 93%;
+	margin-bottom: 10px;
+}
+
+table caption {
+	font-size: 1.5em;
+	margin: 0.5em 0 0.75em;
+}
+
+table tr {
+	background-color: #f8f8f8d8;
+	border: 1px solid #ddd;
+	padding: 0.35em;
+}
+
+table th,
+table td {
+	padding: 0.625em;
+	text-align: center;
+}
+
+table th {
+	background-color: #4c8af5b6;
+	font-size: 0.85em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 1340px) {
+	table {
+		border: 0;
+	}
+
+	table caption {
+		font-size: 1.3em;
+	}
+
+	table thead {
+		border: none;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
+
+	table tr {
+		border-bottom: 3px solid #ddd;
+		display: block;
+		margin-bottom: 0.625em;
+	}
+
+	table td {
+		border-bottom: 1px solid #ddd;
+		display: block;
+		font-size: 0.8em;
+		text-align: right;
+	}
+
+	table td::before {
+		/*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+		content: attr(data-label);
+		float: left;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	table td:last-child {
+		border-bottom: 0;
+	}
 }

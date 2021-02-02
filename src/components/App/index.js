@@ -2,7 +2,6 @@ import "./App.css";
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-
 import HomePage from "../../Pages/Homepage";
 // Mentor Pages
 import MentorSignIn from "../SignInMentor/index";
@@ -17,52 +16,48 @@ import BootcampersProfile from "../../Pages/BootcamperProfile/index";
 import CoachesMain from "../../Pages/CoachesMain";
 import CoachDisplayTables from "../../Pages/CoachDisplayTables";
 
+export default function App() {
+	const [userGoogle, setUserGoogle] = useState("");
+	const [mentorGoogle, setMentorGoogle] = useState("");
 
+	return (
+		<Router>
+			<div className="App">
+				<nav className="navButtons"></nav>
 
-function App() {
-  const [userGoogle, setUserGoogle] = useState("");
-  const [mentorGoogle, setMentorGoogle] = useState("");
-  return (
-    <Router>
-      <div className="App">
-        {/* //having edited the button... it takes to new page! but displays below! */}
-        <nav className="navButtons">{/* <HomePage /> */}</nav>
-
-        <Switch>
-          <Route path="/CoachesTable">
-            <CoachDisplayTables />
-          </Route>
-          <Route path="/Bootcamper">
-            <BootcamperSignIn setUserGoogle={setUserGoogle} />
-          </Route>
-          <Route path="/Mentor">
-            <MentorSignIn setMentorGoogle={setMentorGoogle} />
-          </Route>
-          <Route path="/Coach">
-            <CoachesMain />
-          </Route>
-          <Route path="/BootcampersHome">
-            <BootcamperMain />
-          </Route>
-          <Route path="/MentorsHome">
-            <MentorMain state={mentorGoogle} />
-          </Route>
-          <Route path="/mentorProfile">
-            <MentorProfile />
-          </Route>
-          <Route path="/bootcamperProfile">
-            <BootcampersProfile state={userGoogle} />
-          </Route>
-          <Route path="/mentorMatching">
-            <BootcamperMatch state={userGoogle} />
-          </Route>
-          <Route path="/">
-            <HomePage />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  );
+				<Switch>
+					<Route path="/CoachesTable">
+						<CoachDisplayTables />
+					</Route>
+					<Route path="/Bootcamper">
+						<BootcamperSignIn setUserGoogle={setUserGoogle} />
+					</Route>
+					<Route path="/Mentor">
+						<MentorSignIn setMentorGoogle={setMentorGoogle} />
+					</Route>
+					<Route path="/Coach">
+						<CoachesMain />
+					</Route>
+					<Route path="/BootcampersHome">
+						<BootcamperMain />
+					</Route>
+					<Route path="/MentorsHome">
+						<MentorMain state={mentorGoogle} />
+					</Route>
+					<Route path="/mentorProfile">
+						<MentorProfile />
+					</Route>
+					<Route path="/bootcamperProfile">
+						<BootcampersProfile state={userGoogle} />
+					</Route>
+					<Route path="/mentorMatching">
+						<BootcamperMatch state={userGoogle} />
+					</Route>
+					<Route path="/">
+						<HomePage />
+					</Route>
+				</Switch>
+			</div>
+		</Router>
+	);
 }
-
-export default App;
