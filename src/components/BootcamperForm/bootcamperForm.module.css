@@ -1,41 +1,40 @@
 form {
-  color: white;
-  font-weight: bold;
+	color: white;
+	font-weight: bold;
 }
 
 input {
-  margin: 5px;
-  opacity: 100%;
+	margin: 5px;
 }
 
 .hide {
-  display: none;
+	display: none;
 }
 
 .show {
-  display: block;
+	display: block;
 }
 
 .formClass {
-  display: flex;
-  flex-flow: column wrap;
+	display: flex;
+	flex-flow: column wrap;
 }
 
 .overall {
-  display: flex;
-  flex-flow: column wrap;
-  width: 30%;
-  max-width: 90%;
-  margin: 0 auto;
+	display: flex;
+	flex-flow: column wrap;
+	width: 30%;
+	max-width: 90%;
+	margin: 0 auto;
 }
 
 .ptag {
-  text-align: center;
-  margin-left: 100px;
+	text-align: center;
+	margin-left: 100px;
 }
 
 nav {
-  display: flex;
-  flex-flow: column wrap;
-  align-content: center;
+	display: flex;
+	flex-flow: column wrap;
+	align-content: center;
 }

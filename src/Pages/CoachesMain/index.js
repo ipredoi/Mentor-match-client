@@ -1,6 +1,6 @@
 //functionality
 import React from "react";
-import { BrowserRouter as Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 //css

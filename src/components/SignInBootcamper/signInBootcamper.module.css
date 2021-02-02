@@ -2,6 +2,7 @@
   width: 300px;
   margin-top: 30px;
   margin-bottom: 40px;
+  border-radius: 10px;
 }
 
 .googleSignIn:hover {

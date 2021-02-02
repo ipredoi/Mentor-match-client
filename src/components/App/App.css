@@ -1,21 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
 
 * {
-  font-family: "Roboto", sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 body {
-  background-image: url("../../Images/socBg.png");
-  height: 100vh;
-  width: 100vw;
+	height: 100vh !important;
+	width: 100vw !important;
+	padding: 0;
+	margin: 0;
+	background-image: url("../../Images/socBg.png");
+	background-repeat: no-repeat;
+	overflow: hidden;
+	background-size: cover;
 }
 
 h2,
 h3,
 p {
-  color: white;
+	color: white;
 }
 
 Link {
-  text-decoration: none;
+	text-decoration: none;
 }

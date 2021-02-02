@@ -15,6 +15,7 @@ function MentorProfile({ state }) {
 			.then((response) => response.json())
 			//.then((data) => console.log(data))
 			.then((data) => setDbInfo({ ...data.result }));
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	console.log(dbInfo);
 	return (
