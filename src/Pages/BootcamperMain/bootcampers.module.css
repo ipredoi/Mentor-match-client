@@ -12,3 +12,7 @@ p {
   max-width: 60%;
   text-align: center;
 }
+
+a, u {
+  text-decoration: none;
+}
