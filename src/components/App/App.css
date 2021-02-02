@@ -5,13 +5,13 @@
 }
 
 body {
-	height: 100vh !important;
-	width: 100vw !important;
+	height: 100% !important;
+	width: 100% !important;
 	padding: 0;
 	margin: 0;
 	background-image: url("../../Images/socBg.png");
 	background-repeat: no-repeat;
-	overflow: hidden;
+
 	background-size: cover;
 }
 
