@@ -27,7 +27,7 @@ You can find the server code [here](https://github.com/ipredoi/Mentor-match-serv
 
 ## Getting started
 
-1. Clone the repo: `git clone https://github.com/patrickjfl/mentor-match-client.git`
+1. Clone the repo: `https://github.com/ipredoi/Mentor-match-client.git`
 
 2. Download the required npm modules: `npm i`
 
